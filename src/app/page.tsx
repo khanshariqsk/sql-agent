@@ -90,7 +90,7 @@ export default function Chat() {
     scrollToBottom();
   }, [isStreaming, messages.length]);
   return (
-    <div className="flex flex-col h-screen bg-white">
+    <div className="flex flex-col h-screen bg-white overflow-x-hidden">
       <header className="border-b border-gray-200 bg-white">
         <div className="max-w-5xl mx-auto px-6 py-4">
           <div className="flex items-center space-x-2">
@@ -192,7 +192,7 @@ export default function Chat() {
             )}
           </div>
 
-          <div className="h-32" />
+          {messages.length > 0 && <div className="h-32" />}
         </div>
       </div>
 
